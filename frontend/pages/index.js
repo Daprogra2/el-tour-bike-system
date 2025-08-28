@@ -1,7 +1,7 @@
 // index.js — Entry point for dashboard initialization
 
 import { initTelemetry } from '../telemetry.js';
-import { initAudio } from '../audio.js';
+import { initAudio } from '../audio.mjs';
 import { initMap } from '../map.js';
 import { initForm } from '../form.js';
 import { config } from '../config.js';
