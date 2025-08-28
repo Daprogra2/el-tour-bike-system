@@ -1,10 +1,10 @@
 // index.js — Entry point for dashboard initialization
 
-import { initTelemetry } from '../telemetry.js';
-import { initAudio } from '../audio.mjs';
-import { initMap } from '../map.js';
-import { initForm } from '../form.js';
-import { config } from '../config.js';
+//import { initTelemetry } from '../telemetry.js';
+//import { initAudio } from '../audio.mjs';
+//import { initMap } from '../map.js';
+//import { initForm } from '../form.js';
+//import { config } from '../config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('🚀 Dashboard initializing...');
@@ -53,7 +53,7 @@ export function initTelemetry(config) {
 
 }
 
-// audio.js
+// audio.mjs
 export function initAudio(config) {
   console.log('🎵 Initializing audio with config:', config);
   // Load playlist
