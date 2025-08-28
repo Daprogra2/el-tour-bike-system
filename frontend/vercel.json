@@ -1,12 +1,5 @@
 {
-  "project": {
-    "name": "el-tour-bike-system"
-  },
-  "builds": [],
   "rewrites": [
     { "source": "/", "destination": "/dashboard.html" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/public/$1" }
   ]
 }
