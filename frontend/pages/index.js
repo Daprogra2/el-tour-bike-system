@@ -75,4 +75,4 @@ export function initForm(config) {
   // Validate input
   // Bind to dashboard messaging
 }
-```
+
