@@ -1,10 +1,11 @@
 // telemetry.js
-import { createClient } from '@supabase/supabase-js';
-import { SUPABASE_URL, SUPABASE_KEY } from './config';
+
+import { SUPABASE_URL, SUPABASE_KEY } from './config.js';
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-export async function fetchTelemetry() {
+async function fetchTelemetry() {
   const { data, error } = await supabase.from('telemetry').select('*').order('timestamp', { ascending: false }).limit(1);
   if (error) console.error('Telemetry fetch error:', error);
   return data?.[0];
