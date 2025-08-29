@@ -1,5 +1,5 @@
 // audio.js
-export function triggerAudio(cadence, location) {
+function triggerAudio(cadence, location) {
   if (cadence > 80) {
     playTrack('high-cadence.mp3');
   } else if (location === 'checkpoint-3') {
