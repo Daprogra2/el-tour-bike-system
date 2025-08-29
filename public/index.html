@@ -8,10 +8,9 @@
   <script type="module">
     import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
-    const SUPABASE_URL = 'https://your-project.supabase.co'; // Replace with your actual URL
-    const SUPABASE_KEY = 'your-anon-key'; // Replace with your actual anon key
+    import { SUPABASE_URL, SUPABASE_KEY } from './config.js';
 
-    const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+    import { supabase } from './supabaseClient.js';
 
     console.log('[telemetry] Supabase client initialized');
 
