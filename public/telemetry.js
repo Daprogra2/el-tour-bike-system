@@ -26,7 +26,7 @@ const opts = {
 };
 
 const target = document.getElementById('cadenceGauge');
-const gauge = new Gauge(target).setOptions(opts);
+const gauge = new Donut(target).setOptions(opts);
 gauge.maxValue = 150;
 gauge.set(0); // Initial value
 
