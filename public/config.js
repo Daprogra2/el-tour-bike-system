@@ -1,0 +1,3 @@
+// config.js
+export const SUPABASE_URL = "https://oxletasrbreoyxndwfct.supabase.co";
+export const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im94bGV0YXNyYnJlb3l4bmR3ZmN0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU5NTM0NjIsImV4cCI6MjA3MTUyOTQ2Mn0.TvgDsjrYTzo4FGph1itaPwWuC-v1GGYozGid81RakGs";
