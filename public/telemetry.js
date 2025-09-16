@@ -9,7 +9,7 @@ console.log('[telemetry] Supabase client initialized');
 
 const opts = {
   angle: 0.15,
-  lineWidth: 0.44,
+  lineWidth: 0.1,
   radiusScale: 1,
   pointer: {
     length: 0.6,
@@ -25,9 +25,14 @@ const opts = {
   highDpiSupport: true
 };
 
-const target = document.getElementById('cadenceGauge');
-const gauge = new Donut(target).setOptions(opts);
+const cadenceTarget = document.getElementById('cadenceGauge');
+const gauge = new Donut(cadenceTarget).setOptions(opts);
 gauge.maxValue = 150;
+gauge.set(0); // Initial value
+
+const speedTarget = document.getElementById('speedGauge');
+const gauge = new Donut(speedTarget).setOptions(opts);
+gauge.maxValue = 40;
 gauge.set(0); // Initial value
 
 // Simulate cadence updates
