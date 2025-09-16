@@ -1,91 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Tour Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="module">
-    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="icon" type="image/x-icon" href="assets/lynn.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="cadence" class="gauge-container">
+      <h2>Cadence</h2>
+      <canvas id="cadenceGauge"></canvas>
+    </div>
 
-    import { SUPABASE_URL, SUPABASE_KEY } from './config.js';
-
-    import { supabase } from './supabaseClient.js';
-
-    console.log('[telemetry] Supabase client initialized');
-
-    // Example: Fetch recent telemetry data
-    async function fetchTelemetry() {
-      const { data, error } = await supabase
-        .from('telemetry')
-        .select('*')
-        .order('timestamp', { ascending: false })
-        .limit(10);
-
-      if (error) {
-        console.error('[telemetry] Fetch error:', error);
-      } else {
-        console.log('[telemetry] Latest data:', data);
-        // You can now render this data to the dashboard
-      }
-    }
-
-    fetchTelemetry();
-  </script>
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="leaflet.css" />
-
-  <!-- Leaflet JS -->
-    <script src="leaflet.js"></script>
-    <script type="module" src="telemetry.js"></script>
-    <script type="module" src="audio.js"></script>
-    <script type="module" src="map.js"></script>
-    <script type="module" src="form.js"></script>
-    <script type="module" src="config.js"></script>
-
-</head>
-
-<body>
-  <div id="dashboard">
-    <section id="telemetry">
-      <h2>Telemetry</h2>
-      <div id="speed">Speed: -- mph</div>
-      <div id="cadence">Cadence: -- rpm</div>
-      <div id="distance">Distance: -- mi</div>
-      <div id="elapsedTime">Elapsed Time: --</div>
-      <div id="signalBar" class="signal-bar"></div>
-    </section>
-
-    <section id="audio">
-      <h2>Audio</h2>
-      <button id="playPause">Play/Pause</button>
-      <div id="audioStatus">Status: --</div>
-    </section>
-
-    <section id="map">
-      <h2>Map</h2>
-      <div id="map">Map goes here</div>
-    </section>
-
-    <section id="form">
-      <h2>Message Form</h2>
-      <form id="messageForm">
-        <input type="text" id="messageInput" placeholder="Enter message">
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </div>
-
-  <div class="gauge-container">
-    <label for="speedGauge">Speed</label>
-    <div id="speedGauge" class="gauge-bar"></div>
-  </div>
-
-<div class="circular-gauge" id="speedGauge">
-  <div class="needle"></div>
-  <div class="gauge-label">Speed</div>
-</div>
-
-</body>
+    <div id="speed" class="gauge-container">
+      <h2>Speed</h2>
+      <canvas id="speedGauge"></canvas>
+    </div>
+    <!--<script src="index.js"></script>-->
+  </body>
 </html>
