@@ -4,20 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>El Tour Trike Dashboard</title>
+    
     <link rel="icon" type="image/x-icon" href="assets/lynn.ico">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="cadence" class="gauge-container">
-      <h2>Cadence</h2>
-      <canvas id="cadenceGauge"></canvas>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.2.1/gauge.min.js"></script>
+    <script src="telemetry.js"></script>
+
+ 
+    
+  </head> 
+<body>
+    <div class="dashboard-grid">
+        <div id="cadence" class="gauge-container">
+        <h2>Cadence</h2>
+        <canvas id="cadenceGauge"></canvas>
+        </div>
+
+        <div id="map" class="map-container">
+        <h2>Location</h2>
+        <div id="mapDisplay"></div>
+        </div>
+
+        <div id="speed" class="gauge-container">
+        <h2>Speed</h2>
+        <canvas id="speedGauge"></canvas>
+        </div>
     </div>
 
-    <div id="speed" class="gauge-container">
-      <h2>Speed</h2>
-      <canvas id="speedGauge"></canvas>
+    <div id="elevation" class="graph-container">
+        <h2>Elevation</h2>
+        <canvas id="elevationGraph"></canvas>
     </div>
-    <!--<script src="index.js"></script>-->
-  </body>
+
+    <script type="module" src="telemetry.js"></script>
+    <script type="module" src="map.js"></script>
+    <script type="module" src="graph.js"></script>
+</body>
+
 </html>
