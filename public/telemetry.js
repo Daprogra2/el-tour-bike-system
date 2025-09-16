@@ -37,6 +37,8 @@ speGauge .set(0); // Initial value
 
 // Simulate cadence updates
 setInterval(() => {
-  const simulatedCadence = Math.floor(Math.random() * 150);
-  gauge.set(simulatedCadence);
+  const simulatedCadence1 = Math.floor(Math.random() * 150);
+  const simulatedCadence2 = Math.floor(Math.random() * 150);
+  cadGauge.set(simulatedCadence1);
+  speGauge.set(simulatedCadence2);
 }, 2000);
