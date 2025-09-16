@@ -26,14 +26,14 @@ const opts = {
 };
 
 const cadenceTarget = document.getElementById('cadenceGauge');
-const gauge = new Donut(cadenceTarget).setOptions(opts);
-gauge.maxValue = 150;
-gauge.set(0); // Initial value
+const cadGauge = new Donut(cadenceTarget).setOptions(opts);
+cadGauge.maxValue = 100;
+cadGauge.set(0); // Initial value
 
 const speedTarget = document.getElementById('speedGauge');
-const gauge = new Donut(speedTarget).setOptions(opts);
-gauge.maxValue = 40;
-gauge.set(0); // Initial value
+const speGauge = new Donut(speedTarget).setOptions(opts);
+speGauge .maxValue = 40;
+speGauge .set(0); // Initial value
 
 // Simulate cadence updates
 setInterval(() => {
