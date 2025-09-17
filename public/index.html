@@ -98,11 +98,15 @@
     function sweepGauge(gauge, maxValue) {
       let value = 0;
       const interval = setInterval(() => {
-        gauge.set(value);
+        cadenceGauge.set(value);
+        speedGauge.set(value);
         value += 5;
         if (value > maxValue) {
           clearInterval(interval);
-          setTimeout(() => gauge.set(0), 500);
+          setTimeout(() => {
+            cadenceGauge.set(0);
+            speedGauge.set(0);
+          }, 500);
         }
       }, 50);
     }
