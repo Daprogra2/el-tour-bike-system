@@ -14,28 +14,7 @@
     <!--<script type="module" src="map.js"></script>-->
     <!--<script type="module" src="graph.js"></script>-->
 
-    <script>// Simulate boot sequence
-    setTimeout(() => {
-      document.getElementById('startupOverlay').style.display = 'none';
-      }, 3000);
-
-    function sweepGauge(gauge, maxValue) {
-      let value = 0;
-      const interval = setInterval(() => {
-      gauge.set(value);
-      value += 5;
-      if (value > maxValue) {
-        clearInterval(interval);
-        gauge.set(0);
-      }
-      }, 50);
-    }
-    const elements = document.querySelectorAll('.fade-in');
-      elements.forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 500);
-  });
-
-    
+       
     </script>
   </head> 
 
