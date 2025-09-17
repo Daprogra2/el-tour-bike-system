@@ -7,7 +7,7 @@
     <title>El Tour Trike Dashboard</title>
     
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.2.1/gauge.min.js"></script>
     <script type="module" src="telemetry.js"></script>
@@ -19,6 +19,11 @@
   </head> 
 <body>
     <div class="dashboard-grid">
+        <div id="datatree"class="gauge-container">
+          Telemetry Data <img src="images/telemetry2.png" alt="Telemetry Icon" style="width:20px;height:20px;vertical-align:middle;">
+
+        </div>
+
         <div id="cadence" class="gauge-container">
         <h2>Cadence</h2>
         <canvas id="cadenceGauge"></canvas>
