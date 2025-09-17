@@ -46,3 +46,14 @@ body {
   color: #fff;
   text-align: center;
 }
+
+.gauge-container {
+  background-color: #1a1a1a;
+  border: 2px solid #ff6f00;
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+
