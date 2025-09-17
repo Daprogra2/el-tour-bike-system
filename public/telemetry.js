@@ -34,13 +34,13 @@ const speedTarget = document.getElementById('speedGauge');
 const speGauge = new Donut(speedTarget).setOptions(opts);
 speGauge.maxValue = 40;
 speGauge.set(0); // Initial value
-speGauge.s; // Initial value
+
 // Simulate cadence updates
-setInterval(() => {
+/*setInterval(() => {
   const simulatedCadence1 = Math.floor(Math.random() * 150);
   const simulatedCadence2 = Math.floor(Math.random() * 150);
   cadGauge.set(simulatedCadence1);
   document.getElementById('cadenceValue').innerText = `${simulatedCadence1} RPM`;
   speGauge.set(simulatedCadence2);
   document.getElementById('speedValue').innerText = `${simulatedCadence2} MPH`;
-}, 2000);
+}, 2000); */
