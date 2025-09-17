@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+:root {
+  --bg-dark: #1a1a1a;
+  --accent: #5aede5;
+  --text-light: #fff;
+}
+
 body {
   font-family: 'Orbitron', sans-serif;
+  color: var(--text-light);
   background-color: #262626;
   margin: 0;
   padding: 0;
@@ -40,8 +47,8 @@ body {
 }
 
 .gauge-container {
-  background-color: #1a1a1a;
-  border: 2px solid #5aede5;
+  background-color: var(--bg-dark);
+  border: 2px solid var(--accent);
   border-radius: 12px;
   padding: 16px;
   color: #fff;
@@ -66,3 +73,37 @@ body {
   transform: scale(1.02);
   transition: all 0.3s ease;
 }
+
+.gauge-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5aede5;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container,
+  .graph-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+.dashboard-header {
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #5aede5;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 28px;
+  border-bottom: 2px solid #5aede5;
+}
+
+
+
+
+
