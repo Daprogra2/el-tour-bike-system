@@ -42,11 +42,11 @@
         <div id="datatree" class="gauge-container fade-in">
           <h2>Telemetry Data</h2> <br>
           <img src="images/telemetry4.png" alt="Telemetry Icon" style="width:20px;height:20px;vertical-align:middle;"><br>
-          <pre id="dataTree" style="text-align:center; font-size:12px; color:#5aede5;">Present Elevation ......... 2500</pre>
-          <pre id="dataTree" style="text-align:center; font-size:12px; color:#5aede5;">Elevation Change .......... +100</pre>
-          <pre id="dataTree" style="text-align:center; font-size:12px; color:#5aede5;">Trike System Sync ......... Good</pre>
-          <pre id="dataTree" style="text-align:center; font-size:12px; color:#5aede5;">Last Transmission ......... 10 seconds ago</pre>
-        </div>    
+          <pre class="dataTree" style="text-align:center; font-size:12px; color:#5aede5;">Present Elevation ......... 2500</pre>
+          <pre class="dataTree" style="text-align:center; font-size:12px; color:#5aede5;">Elevation Change .......... +100</pre>
+          <pre class="dataTree" style="text-align:center; font-size:12px; color:#5aede5;">Trike System Sync ......... Good</pre>
+          <pre class="dataTree" style="text-align:center; font-size:12px; color:#5aede5;">Last Transmission ......... 10 seconds ago</pre>
+        </div>
 
         <div id="speed" class="gauge-container fade-in">
         <h2>Speed</h2>
@@ -98,18 +98,14 @@
     function sweepGauge(gauge, maxValue) {
       let value = 0;
       const interval = setInterval(() => {
-        cadGauge.set(value);
-        speGauge.set(value);
+        gauge.set(value);
         value += 5;
         if (value > maxValue) {
           clearInterval(interval);
-          setTimeout(() => {
-            cadGauge.set(0);
-            speGauge.set(0);
-          }, 500);
-        }
+          setTimeout(() => gauge.set(0), 500);
+      }
       }, 50);
-    }
+  }
   </script>
    
 </body>
