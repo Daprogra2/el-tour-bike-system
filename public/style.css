@@ -21,14 +21,6 @@ body {
   padding: 0 20px;
 }
 
-.map-container {
-  background-color: #1a1a1a;
-  border: 2px solid #5aede5;
-  border-radius: 12px;
-  padding: 16px;
-  color: #fff;
-  text-align: center;
-}
 
 #mapDisplay {
   height: 300px;
@@ -56,7 +48,7 @@ body {
   text-align: center;
 }
 
-.map-container-wrapper {
+.map-container {
   margin: 40px auto;
   width: 80%;
   background-color: #1a1a1a;
