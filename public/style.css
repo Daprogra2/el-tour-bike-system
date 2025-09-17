@@ -120,14 +120,14 @@ body {
 /* Fade-in animation */
 .fade-in {
   opacity: 0;
+}
+
+.fade-in.visible {
   animation: fadeIn 1s ease forwards;
 }
 
 @keyframes fadeIn {
   to { opacity: 1; }
 }
-
-
-
 
 

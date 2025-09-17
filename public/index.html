@@ -86,8 +86,8 @@
 
         // Fade in dashboard sections
         document.querySelectorAll('.fade-in').forEach((el, idx) => {
-          setTimeout(() => el.style.opacity = 1, idx * 500);
-        });
+          setTimeout(() => el.classList.add('visible'), idx * 500);
+    });
 
         // Optional: sweep gauges if initialized
         if (window.cadenceGauge) sweepGauge(cadenceGauge, 100);
